@@ -1,1 +1,193 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: url('https://cdn.pixabay.com/photo/2015/10/23/10/12/space-997037_960_720.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px solid #00ffcc;
+}
+
+h1 {
+  font-size: 3em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav button {
+  background-color: #333;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+  background-color: #00ffcc;
+}
+
+button.fullscreen-btn {
+  padding: 15px 25px;
+  background-color: #00ffcc;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+button.fullscreen-btn:hover {
+  background-color: #008080;
+}
+
+/* Tab Contents */
+.tab-content {
+  display: none;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#games {
+  display: block;
+}
+
+.tab-content h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.tab-content p {
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+#game-list, #sound-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.game-slot, .sound-slot {
+  background-color: #444;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.game-slot:hover, .sound-slot:hover {
+  transform: scale(1.1);
+}
+
+.game-slot img, .sound-slot img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.game-slot button, .sound-slot button {
+  margin-top: 10px;
+  background-color: #00ffcc;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.game-slot button:hover, .sound-slot button:hover {
+  background-color: #008080;
+}
+
+/* Mouse Cursor Tab */
+#cursor input[type="color"] {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+#cursor label {
+  font-size: 1.2em;
+  margin-right: 10px;
+  text-align: center;
+}
+
+#cursor {
+  text-align: center;
+}
+
+#cursor input[type="color"] {
+  width: 100px;
+  height: 40px;
+}
+
+/* Custom Cursor Styles */
+body {
+  cursor: url('default-cursor.png'), auto;
+}
+
+/* Mobile Optimization */
+@media only screen and (max-width: 768px) {
+  header {
+    text-align: center;
+  }
+
+  nav ul {
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  button.fullscreen-btn {
+    font-size: 1.1em;
+    width: 100%;
+  }
+
+  .game-slot, .sound-slot {
+    width: 150px;
+    margin: 10px 0;
+  }
+}
+
 
