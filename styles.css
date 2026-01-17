@@ -7,11 +7,10 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: url('https://cdn.pixabay.com/photo/2015/10/23/10/12/space-997037_960_720.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
-  overflow-x: hidden;
+  background: #000; /* Start with black background */
+  overflow: hidden;
   height: 100vh;
+  position: relative;
 }
 
 header {
@@ -65,6 +64,95 @@ button.fullscreen-btn {
 
 button.fullscreen-btn:hover {
   background-color: #008080;
+}
+
+/* Aurora Effect */
+@keyframes aurora {
+  0% {
+    background-position: 0 0, 100% 100%;
+  }
+  50% {
+    background-position: 0 100%, 100% 0;
+  }
+  100% {
+    background-position: 0 0, 100% 100%;
+  }
+}
+
+.aurora {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(0, 255, 255, 0.5), rgba(0, 0, 255, 0.5), rgba(0, 255, 0, 0.5));
+  background-size: 300% 300%;
+  animation: aurora 20s ease infinite;
+  z-index: -1; /* Keeps the aurora in the background */
+}
+
+/* Floating Planets */
+@keyframes floating-planets {
+  0% {
+    transform: rotate(0deg);
+    left: -150px;
+  }
+  50% {
+    transform: rotate(360deg);
+    left: 50%;
+    top: 25%;
+  }
+  100% {
+    transform: rotate(720deg);
+    left: 100%;
+  }
+}
+
+.planet {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: cover;
+  animation: floating-planets 30s linear infinite;
+}
+
+.planet1 {
+  background-image: url('https://example.com/planet1.jpg'); /* Replace with your planet image */
+  animation-duration: 40s;
+}
+
+.planet2 {
+  background-image: url('https://example.com/planet2.jpg'); /* Replace with your planet image */
+  animation-duration: 45s;
+}
+
+.planet3 {
+  background-image: url('https://example.com/planet3.jpg'); /* Replace with your planet image */
+  animation-duration: 50s;
+}
+
+/* Starry Background */
+@keyframes stars {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-500px, -500px);
+  }
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://example.com/starry-sky.png'); /* Replace with your starry background */
+  background-repeat: repeat;
+  animation: stars 100s linear infinite;
+  z-index: -2; /* Keep it behind other elements */
 }
 
 /* Tab Contents */
