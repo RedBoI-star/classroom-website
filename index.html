@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classroom</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Classroom</h1>
+    <nav>
+      <ul>
+        <li><button onclick="showTab('games')">Games</button></li>
+        <li><button onclick="showTab('soundboard')">Soundboard</button></li>
+        <li><button onclick="showTab('cursor')">Mouse Cursor</button></li>
+        <li><button onclick="window.location.href='https://fwcs.schoology.com/home#/?_k=k0nbqu'">P4nic Button</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Games Tab -->
+  <div id="games" class="tab-content">
+    <h2>Games</h2>
+    <div id="game-list"></div> <!-- Dynamically populated game slots -->
+  </div>
+
+  <!-- Soundboard Tab -->
+  <div id="soundboard" class="tab-content" style="display:none;">
+    <h2>Soundboard</h2>
+    <div id="sound-list"></div> <!-- Dynamically populated soundboard slots -->
+  </div>
+
+  <!-- Mouse Cursor Tab -->
+  <div id="cursor" class="tab-content" style="display:none;">
+    <h2>Mouse Cursor Customization</h2>
+    <label for="cursor-color">Select Cursor Color:</label>
+    <input type="color" id="cursor-color" onchange="changeCursorColor(event)">
+  </div>
+
+  <!-- Full-Screen Button (Optional for Games) -->
+  <button class="fullscreen-btn" onclick="toggleFullScreen()">Go Full-Screen</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
 
